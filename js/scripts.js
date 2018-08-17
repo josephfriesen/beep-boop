@@ -16,11 +16,45 @@ function divisibleByThree(value) {
   }
 }
 
+function checkForDigitZero(value) {
+  var zeros = false;
+  var string = value.toString();
+  var arr = [];
+  for (var i = 0; i < string.length; i++) {
+    arr.push(string[i]);
+  }
+  arr.forEach(function(digit) {
+    if (digit === "0") {
+      zeros = true;
+    }
+  });
+  return zeros;
+}
+
+function checkForDigitOne(value) {
+  var ones = false;
+  var string = value.toString();
+  var arr = [];
+  for (var i = 0; i < string.length; i++) {
+    arr.push(string[i]);
+  }
+  arr.forEach(function(digit) {
+    if (digit === "1") {
+      ones = true;
+    }
+  });
+  return ones;
+}
+
 function generateNumberList(n) {
   var output = [];
   for (i = 0; i <= n; i++) {
     if (divisibleByThree(i)) {
       output.push("I'm sorry, Dave, I'm afraid I can't do that.");
+    } else if (checkForDigitOne(i)) {
+      output.push("Boop!");
+    } else if (checkForDigitZero(i)) {
+      output.push("Beep!");
     } else {
     output.push(i);
     }
