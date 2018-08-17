@@ -121,6 +121,7 @@ $(document).ready(function() {
     var sortOrder = $("input:radio[name=sort-order]:checked").val();
     var userName = $("#first-name").val();
     $(".name-here").text(userName);
+    var list;
 
     if (isNaN(userInput)) {
       $("#number").fadeOut();
@@ -141,11 +142,14 @@ $(document).ready(function() {
       $("#number-list").text(""); // clear ouutput number list if user has already submitted a number since loading the page
 
       if (sortOrder === "ascending") {
-        var list = generateNumberList(userInput, userName);
+        list = generateNumberList(userInput, userName);
       } else if (sortOrder === "descending") {
-        var list = reverseListOrder(generateNumberList(userInput, userName));
+        list = reverseListOrder(generateNumberList(userInput, userName));
       } else if (sortOrder === "randomize") {
-        var list = joesRandomizer(generateNumberList(userInput, userName));
+        var oldlist = generateNumberList(userInput, userName);
+        console.log(oldlist)
+        list = joesRandomizer(oldlist)
+        console.log(list)
       }
 
       list.forEach(function(number) {

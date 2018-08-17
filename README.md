@@ -38,6 +38,10 @@ A single web page that purports to be able to list the first _(n+1)_ nonnegative
 
 * Program will accept a name from the user and replace all instances of "Dave" with the user's name.
 
+* Program will replace integers according to rules listed above, but with option to print the list in random order.
+  * Example input: "10"
+  * Output example: "2 / I'm sorry, Dave, I'm afraid I can't do that. / I'm sorry, Dave, I'm afraid I can't do that. / 5 / 7 / 4 / I'm sorry, Dave, I'm afraid I can't do that. / Boop! / Boop! I'm sorry, Dave, I'm afraid I can't do that. / 8" (corresponding to the permutation (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) -> (2, 0, 3, 5, 7, 4, 6, 1, 10, 9, 8))
+
 
 ***
 
