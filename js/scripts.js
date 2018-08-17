@@ -8,10 +8,22 @@ function testInt(value) {
   }
 }
 
+function divisibleByThree(value) {
+  if (value % 3 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function generateNumberList(n) {
   var output = [];
   for (i = 0; i <= n; i++) {
+    if (divisibleByThree(i)) {
+      output.push("I'm sorry, Dave, I'm afraid I can't do that.");
+    } else {
     output.push(i);
+    }
   }
   return output;
 }
