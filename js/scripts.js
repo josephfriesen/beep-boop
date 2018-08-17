@@ -62,6 +62,15 @@ function generateNumberList(n, name) {
   return output;
 }
 
+function reverseListOrder(array) {
+  var output = [];
+  var len = array.length;
+  for (var i = len-1; i >=0; i--) {
+    output.push(array[i]);
+  }
+  return output;
+}
+
 
 
 
@@ -80,6 +89,8 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = Number($("#user-number").val());
+    var sortOrder = $("input:radio[name=sort-order]:checked").val();
+    console.log(sortOrder);
     var userName = $("#first-name").val();
     $(".name-here").text(userName);
 
@@ -102,7 +113,12 @@ $(document).ready(function() {
 
       $("#number-list").text(""); // clear ouutput number list if user has already submitted a number since loading the page
 
-      var list = generateNumberList(userInput, userName);
+      if (sortOrder === "ascending") {
+        var list = generateNumberList(userInput, userName);
+      } else if (sortOrder === "descending") {
+        var list = reverseListOrder(generateNumberList(userInput, userName));
+      }
+
       list.forEach(function(number) {
         $("#number-list").append("<li> " + number.toString() + " </li>");
       })

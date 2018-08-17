@@ -50,6 +50,12 @@ body {
   font-size: 10pt;
 }
 
+.radio {
+  padding: 4px;
+  margin: 8px;
+  font-size: 10pt;
+}
+
 h3 {
   padding: 4px;
   margin: 4px;
