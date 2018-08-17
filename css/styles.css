@@ -23,15 +23,9 @@
 }
 
 #header p {
-  padding: 4px;
-}
-
-.col-md-4 {
-
-}
-
-.col-md-8 {
-
+  text-align: justify;
+  margin: 0 auto;
+  width: 50em;
 }
 
 #input-col {
@@ -76,6 +70,16 @@ p#error-msg {
 #number-list {
   font-family: Courier New;
   font-size: 9pt;
+  text-align: center;
+}
+
+#number-list ul {
+  list-style: none;
+  display: inline;
+}
+
+#number-list li {
+  display: block;
 }
 
 #number-list img {
