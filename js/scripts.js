@@ -71,7 +71,36 @@ function reverseListOrder(array) {
   return output;
 }
 
+// The following function is taken from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
+function randomize(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+
+// This function is my own attempt to write a randomizing function.
+function joesRandomizer(array) {
+  var len = array.length;
+  var output = [];
+  var limit;
+  var rand;
+  for (var j = 0; j < len; j++) {
+    limit = len - j;
+    rand = Math.floor(Math.random() * (limit));
+    output.push(array[rand]);
+    array.splice(rand,1);
+  }
+  return output;
+}
 
 
 
@@ -90,7 +119,6 @@ $(document).ready(function() {
 
     var userInput = Number($("#user-number").val());
     var sortOrder = $("input:radio[name=sort-order]:checked").val();
-    console.log(sortOrder);
     var userName = $("#first-name").val();
     $(".name-here").text(userName);
 
@@ -116,6 +144,8 @@ $(document).ready(function() {
         var list = generateNumberList(userInput, userName);
       } else if (sortOrder === "descending") {
         var list = reverseListOrder(generateNumberList(userInput, userName));
+      } else if (sortOrder === "randomize") {
+        var list = joesRandomizer(generateNumberList(userInput, userName));
       }
 
       list.forEach(function(number) {
