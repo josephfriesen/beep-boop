@@ -1,6 +1,6 @@
 # Beep Boop!
 
-#### _, submitted for Epicodus Code Review 8/17/2018_
+#### A simple web page that lists numbers from 0 to n... until things go wrong. Submitted for Epicodus Code Review 8/17/2018_
 
 ### _Created by_ **Joseph Friesen**
 
@@ -8,7 +8,7 @@
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A single web page that purports to be able to list the first _(n+1)_ nonnegative integers, with _n_ a number given by the user, but in actuality replaces certain of those numbers with simulated computer errors, with substitutions made according to the rules enumerated below under "Specifications".
 
 ***
 
@@ -33,6 +33,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 * Given an array of integers, will replace all numbers containing a 0 digit but not containing a 1 digit nor divisible by 3 with string "Beep!"
   * Example input: "20"
   * Output: "I'm sorry Dave, I'm afraid I can't do that. / Boop! / 2 / I'm sorry Dave, I'm afraid I can't do that. / 4 / 5 / I'm sorry Dave, I'm afraid I can't do that. / 7 / 8 / I'm sorry Dave, I'm afraid I can't do that. / Boop! / Boop! / I'm sorry Dave, I'm afraid I can't do that. / Boop! / Boop! / I'm sorry Dave, I'm afraid I can't do that. / Boop! / Boop! / I'm sorry Dave, I'm afraid I can't do that. / Boop! / Beep!"
+
+* Program will return the list of integers with preceding exceptions in ascending or descending order as specified by the user.
+
+* Program will accept a name from the user and replace all instances of "Dave" with the user's name.
 
 
 ***

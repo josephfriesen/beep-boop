@@ -100,12 +100,11 @@ $(document).ready(function() {
       $("#not-a-number").fadeIn();
     }
     else if (testInt(userInput) === false || userInput < 0) {
-      console.log(userInput);
       $("#number").fadeOut();
       $("#not-a-number").fadeOut();
       $("#not-an-int").fadeIn();
     }
-    else if (testInt(userInput) === true && userInput >= 0) {
+    else if (testInt(userInput) && userInput >= 0) {
       $("#not-a-number").fadeOut();
       $("#not-an-int").fadeOut();
       $("#number").fadeIn();
