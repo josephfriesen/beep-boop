@@ -8,7 +8,13 @@ function testInt(value) {
   }
 }
 
-
+function generateNumberList(n) {
+  var output = [];
+  for (i = 0; i <= n; i++) {
+    output.push(i);
+  }
+  return output;
+}
 
 
 
@@ -30,21 +36,28 @@ $(document).ready(function() {
     var userInput = Number($("#user-number").val());
 
     if (isNaN(userInput)) {
-      $("#number-list").fadeOut();
+      $("#number").fadeOut();
       $("#not-an-int").fadeOut();
       $("#not-a-number").fadeIn();
     }
     else if (testInt(userInput) === false || userInput < 0) {
       console.log(userInput);
-      $("#number-list").fadeOut();
+      $("#number").fadeOut();
       $("#not-a-number").fadeOut();
       $("#not-an-int").fadeIn();
     }
     else if (testInt(userInput) === true && userInput >= 0) {
       $("#not-a-number").fadeOut();
       $("#not-an-int").fadeOut();
-      $("#number-list").fadeIn();
+      $("#number").fadeIn();
       $("#put-number-here").text(userInput);
+
+      $("#number-list").text(""); // clear ouutput number list if user has already submitted a number since loading the page
+
+      var list = generateNumberList(userInput);
+      list.forEach(function(number) {
+        $("#number-list").append("<li> " + number.toString() + " </li>");
+      })
     }
 
 
