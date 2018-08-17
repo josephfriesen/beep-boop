@@ -71,23 +71,24 @@ function reverseListOrder(array) {
   return output;
 }
 
-// The following function is taken from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+// The following function is taken from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array. It was used to randomize arrays previous to writing the function joesRandomizer below.
+//
+// function randomize(array) {
+//   var currentIndex = array.length, temporaryValue, randomIndex;
+//   while (0 !== currentIndex) {
+//
+//     randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex -= 1;
+//
+//     temporaryValue = array[currentIndex];
+//     array[currentIndex] = array[randomIndex];
+//     array[randomIndex] = temporaryValue;
+//   }
+//   return array;
+// }
 
-function randomize(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-  while (0 !== currentIndex) {
 
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
-
-// This function is my own attempt to write a randomizing function.
+// This function is my own attempt to write a function that takes an array and returns an array with the entries in random order. The function iteratively runs the splice method and will change the given array to an empty array after the function finishes running.
 function joesRandomizer(array) {
   var len = array.length;
   var output = [];
@@ -146,10 +147,7 @@ $(document).ready(function() {
       } else if (sortOrder === "descending") {
         list = reverseListOrder(generateNumberList(userInput, userName));
       } else if (sortOrder === "randomize") {
-        var oldlist = generateNumberList(userInput, userName);
-        console.log(oldlist)
-        list = joesRandomizer(oldlist)
-        console.log(list)
+        list = joesRandomizer(generateNumberList(userInput, userName));
       }
 
       list.forEach(function(number) {
