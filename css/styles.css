@@ -8,6 +8,21 @@
   margin: 5px;
 }
 
+#header img {
+  display: block;
+  width: 80%;
+  padding: 4px;
+  margin: 20px;
+  border-color: red;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#header h2 {
+  text-align: center;
+  display: block;
+}
+
 p#error-msg {
   text-align: center;
   font-family: Courier New;
