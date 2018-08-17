@@ -24,3 +24,8 @@ p#error-msg {
 #number {
   display: none;
 }
+
+#number-list {
+  font-family: Courier New;
+  font-size: 7pt;
+}
