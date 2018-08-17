@@ -1,0 +1,9 @@
+#header {
+  background-color: blue;
+  color: black;
+  padding: 4px;
+  border-color: red;
+  border-width: 6px;
+  border-style: solid;
+  margin: 5px;
+}
