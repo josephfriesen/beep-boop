@@ -50,7 +50,7 @@ function generateNumberList(n) {
   var output = [];
   for (i = 0; i <= n; i++) {
     if (divisibleByThree(i)) {
-      output.push("I'm sorry, Dave, I'm afraid I can't do that.");
+      output.push("<img src='img/hal.png'> I'm sorry, Dave, I'm afraid I can't do that. <img src='img/hal.png'");
     } else if (checkForDigitOne(i)) {
       output.push("Boop!");
     } else if (checkForDigitZero(i)) {

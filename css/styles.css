@@ -26,21 +26,32 @@
   padding: 4px;
 }
 
-.col-md-6 {
+.col-md-4 {
+
+}
+
+.col-md-8 {
+
+}
+
+#input-col {
   width: 40%;
   padding: 4px;
   border-color: red;
   border-style: solid;
   border-top-width: 2px;
   border-bottom-width: 2px;
-}
-
-#input-col {
   border-left-width: 2px;
   border-right-width: 1px;
 }
 
 #output-col {
+  width: 40%;
+  padding: 4px;
+  border-color: red;
+  border-style: solid;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
   border-left-width: 1px;
   border-right-width: 2px;
 }
@@ -64,5 +75,10 @@ p#error-msg {
 
 #number-list {
   font-family: Courier New;
-  font-size: 7pt;
+  font-size: 9pt;
+}
+
+#number-list img {
+  width: 20px;
+  height: 20px;
 }
