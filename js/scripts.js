@@ -46,11 +46,11 @@ function checkForDigitOne(value) {
   return ones;
 }
 
-function generateNumberList(n) {
+function generateNumberList(n, name) {
   var output = [];
   for (i = 0; i <= n; i++) {
     if (divisibleByThree(i)) {
-      output.push("<img src='img/hal.png'> I'm sorry, Dave, I'm afraid I can't do that. <img src='img/hal.png'");
+      output.push("<img src='img/hal.png'> I'm sorry, " + name + ", I'm afraid I can't do that. <img src='img/hal.png'");
     } else if (checkForDigitOne(i)) {
       output.push("Boop!");
     } else if (checkForDigitZero(i)) {
@@ -80,6 +80,8 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = Number($("#user-number").val());
+    var userName = $("#first-name").val();
+    $(".name-here").text(userName);
 
     if (isNaN(userInput)) {
       $("#number").fadeOut();
@@ -100,7 +102,7 @@ $(document).ready(function() {
 
       $("#number-list").text(""); // clear ouutput number list if user has already submitted a number since loading the page
 
-      var list = generateNumberList(userInput);
+      var list = generateNumberList(userInput, userName);
       list.forEach(function(number) {
         $("#number-list").append("<li> " + number.toString() + " </li>");
       })
