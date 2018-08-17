@@ -8,7 +8,7 @@
 
 ## Description
 
-A single web page that purports to be able to list the first _(n+1)_ nonnegative integers, with _n_ a number given by the user, but in actuality replaces certain of those numbers with simulated computer errors, with substitutions made according to the rules enumerated below under "Specifications".
+A single web page that purports to be able to list the first _(n+1)_ nonnegative integers, with _n_ a number given by the user, but in actuality replaces certain of those numbers with simulated computer errors, with substitutions made according to the rules enumerated below."Specifications".
 
 ***
 
