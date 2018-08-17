@@ -7,3 +7,20 @@
   border-style: solid;
   margin: 5px;
 }
+
+p#error-msg {
+  text-align: center;
+  font-family: Courier New;
+}
+
+#not-a-number {
+  display: none;
+}
+
+#not-an-int {
+  display: none;
+}
+
+#number-list {
+  display: none;
+}
