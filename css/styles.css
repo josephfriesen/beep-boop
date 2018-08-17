@@ -20,7 +20,29 @@
 
 #header h2 {
   text-align: center;
-  display: block;
+}
+
+#header p {
+  padding: 4px;
+}
+
+.col-md-6 {
+  width: 40%;
+  padding: 4px;
+  border-color: red;
+  border-style: solid;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+#input-col {
+  border-left-width: 2px;
+  border-right-width: 1px;
+}
+
+#output-col {
+  border-left-width: 1px;
+  border-right-width: 2px;
 }
 
 p#error-msg {
